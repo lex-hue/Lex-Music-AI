@@ -1,0 +1,48 @@
+/* ----------------- */
+/* Main Page Styling */
+/* ----------------- */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,700|Open+Sans:300,700");
+
+body {
+    font-family: "Open Sans", Helvetica, Verdana, sans-serif !important;
+    font-weight: 300 !important;
+    margin: 0;
+    background-color: #222 !important;
+}
+
+#content {
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+#canvas, #canvas-gl {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+#canvas {
+    z-index: 3;
+}
+
+#canvas-gl {
+    z-index: 2;
+}
+
+.vert-cen {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}

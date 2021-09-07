@@ -1,0 +1,45 @@
+/* ----------------- */
+/* Background Styles */
+/* ----------------- */
+
+#background {
+	overflow: hidden;
+	position: absolute;
+	transition: opacity 0.3s;
+}
+
+.bgleft {
+    margin-left: 50%;
+}
+
+.bgright {
+    margin-left: -50%;
+}
+
+#bgimg1, #limg1, #bgimg2, #limg2 {
+    position: fixed;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#bgimg1, #bgimg2 {
+	filter: blur(40px);
+	opacity: 0;
+	transition: opacity 0.3s linear;
+	transition: filter 1s linear;
+}
+
+#bgimg2, #limg2 {
+    transform: scale(-1, 1);
+}
+
+.realbg img {
+    z-index: 0;
+}
+
+.lazyaf img {
+    z-index: -1;
+    filter: blur(40px);
+}
