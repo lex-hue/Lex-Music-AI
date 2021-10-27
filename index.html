@@ -82,31 +82,31 @@
             <div class="vert-cen overlay-window" id="gui-full-holder">
                 <div class="absolute-center overlay-pane" id="controls">
                     <div id="db-prev" class="page-control interactable fa fa-chevron-circle-left"
-                            onClick="Database.prevPage()" title="Previous page"></div>
+                            onClick="Database.prevPage()" title="Vorherige Seite"></div>
                     <div id="db-next" class="page-control interactable fa fa-chevron-circle-right"
-                            onClick="Database.nextPage()" title="Next page"></div>
+                            onClick="Database.nextPage()" title="Nächste Seite"></div>
                     <div onClick="GuiWrapper.closeGui();" class="boxclose fa fa-times-circle interactable"></div>
                     <div class="ui fluid action input inverted">
-                        <input type="text" readonly Value="Select Audio File">
+                        <input type="text" readonly Value="Audiodatei auswählen">
                         <input accept="audio/*" type="file" id="fileSelector">
                         <div id="upload-button" class="ui icon button interactable">
                             <span class="fa fa-plus"></span>
                         </div>
                     </div>
                     <table class="ui selectable inverted table" id="db-view" border="1"></table>
-                    <div id="db-page-info">Page ??/??</div>
+                    <div id="db-page-info">Seite ??/??</div>
                     <div id="db-input">
                         <div class="ui input">
                             <input type="text" id="field-artist" placeholder="Artist" disabled>
                         </div>
                         <div class="ui input">
-                            <input type="text" id="field-title" placeholder="Title" disabled>
+                            <input type="text" id="field-title" placeholder="Titel" disabled>
                         </div>
                     </div>
                     <div id="db-controls">
-                        <button class="ui button interactable" id="add2DB" disabled>Add To Library</button>
-                        <button class="ui button interactable" id="viewDB">Refresh Library</button>
-                        <button class="ui button interactable" id="delDB">Delete Library</button>
+                        <button class="ui button interactable" id="add2DB" disabled>Zur Bibliothek hinzufügen</button>
+                        <button class="ui button interactable" id="viewDB">Bibliothek aktualisieren</button>
+                        <button class="ui button interactable" id="delDB">Bibliothek löschen</button>
                     </div>
                 </div>
             </div>
@@ -121,32 +121,23 @@
                     </div>
                     <div id="about-content">
                         <div>
-                            made with <span class="fa fa-heart"></span> by 
-                            <a href="//caseif.net" target="_blank" rel="noopener noreferrer">caseif</a> & 
-                            <a href="http://incept.online" target="_blank" rel="noopener noreferrer">incept</a>
+                            Gemacht mit <span class="fa fa-heart"></span> von Qerim Iseni09
                         </div>
                         <div>
-                            source available on
-                            <a href="//github.com/caseif/js.nation" target="_blank" rel="noopener noreferrer">github</a>
-                        </div>
-                        <div>
-                            <a href="technologies.html" target="_blank" rel="noopener noreferrer">technologies used</a>
-                        </div>
-                        <div>
-                            inspired by <a href="//nations.io/">the nations</a>
+                            inspiriert von die <a href="nations.io/">nations</a>
                         </div>
                         <hr>
                         <div>
-                            hotkeys
+                            Tastenkombinationen
                         </div>
                         <div id="about-hotkeys">
-                            f &mdash; flip background
+                            f &mdash; Hintergrund umdrehen
                             <br>
-                            g &mdash; toggle spectrum glow
+                            g &mdash; Spektrum leuchten umschalten
                             <br>
-                            space &mdash; play/pause
+                            space &mdash; Abspielen/Pause
                             <br>
-                            escape &mdash; close overlay
+                            escape &mdash; Überlagerung schließen
                         </div>
                     </div>
                 </div>
@@ -157,9 +148,9 @@
             <div class="vert-cen overlay-window" id="welcome-full-holder">
                 <div class="absolute-center overlay-pane" id="welcome-pane">
                     <div id="welcome-content">
-                        welcome to js.nation!
+                       Willkommen bei Lex AI
                         <br><br>
-                        to get started, click "view library" in the bottom-left corner and add a song.
+                        Um zu beginnen, klicke unten links auf "Bibliothek anzeigen" und füge einen Song hinzu.
                     </div>
                 </div>
             </div>
@@ -169,9 +160,9 @@
             <div class="vert-cen overlay-window" id="welcome-noauto-holder">
                 <div class="absolute-center overlay-pane" id="welcome-noauto-pane">
                     <div id="welcome-noauto-content">
-                        welcome to js.nation!
+                        Willkommen bei Lex AI
                         <br><br>
-                        autoplay is disabled in your browser! click "view library" and select a song to begin.
+                        Autoplay ist in Ihrem Browser deaktiviert! Klicken Sie auf "Bibliothek anzeigen" und wählen Sie einen Song aus, um zu beginnen.
                     </div>
                 </div>
             </div>
@@ -187,14 +178,14 @@
         <div class="flex gui-part" id="gui-bottom">
             <!-- Left -->
             <button class="ui button inverted transparent interactable" onclick="GuiWrapper.openGui();"
-                    id="view-database">View Library</button>
+                    id="view-database">Bibliothek anzeigen</button>
             <!-- Center -->
             <div class="flex" id="audio-player">  
                 <div class="flex main-controls">
-                    <span id="previous" class="fa fa-step-backward interactable" onClick="Database.playPrevSong()"></span>
-                    <span id="play" class="fa fa-pause action interactable"></span>
-                    <span id="next" class="fa fa-step-forward action interactable" onClick="Database.playNextSong()"></span>
-                    <span id="shuffle" class="fa fa-random action interactable" onClick="Database.toggleShuffle()"></span>
+                    <span id="Vorher" class="fa fa-step-backward interactable" onClick="Database.playPrevSong()"></span>
+                    <span id="Pause" class="fa fa-pause action interactable"></span>
+                    <span id="Nächste" class="fa fa-step-forward action interactable" onClick="Database.playNextSong()"></span>
+                    <span id="Mischen" class="fa fa-random action interactable" onClick="Database.toggleShuffle()"></span>
                 </div>
                 <span id="time" class="time">00:00</span>
                 <progress id="progressbar" class="flex-auto interactable" value="0" max="100"></progress>
