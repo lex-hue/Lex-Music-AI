@@ -10,7 +10,7 @@ let Emblem = new function() {
         jqWindow = $(window);
         image = new Image();
         image.onload = () => loaded = true;
-        image.src = "./img/foto.PNG";
+        image.src = "./img/foto.png";
 
         Callbacks.addCallback(drawCallback);
     }
